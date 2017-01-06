@@ -17,8 +17,7 @@ public class RandomNumberService {
 
 	/**
 	 * Returns a random set of numbers greater than 50
-	 * @param maxSize
-	 * @return
+	 * @return List of random numbers
 	 */
 	public List<Integer> generateNumbers(){
 		List<Integer> numbersList = new ArrayList<>();
