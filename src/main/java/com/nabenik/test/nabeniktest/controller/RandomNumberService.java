@@ -10,13 +10,12 @@ import javax.enterprise.context.RequestScoped;
 /**
  * Simple CDI service aimed for random numbers generation
  * @author tuxtor
- *
  */
 @RequestScoped
 public class RandomNumberService {
 
 	/**
-	 * Returns a random set of numbers greater than 50
+	 * Returns a random set of numbers
 	 * @return List of random numbers
 	 */
 	public List<Integer> generateNumbers(){
@@ -25,10 +24,7 @@ public class RandomNumberService {
 		for (int i = 0; i < 10000; i++) {
 			numbersList.add(randomGenerator.nextInt(100));
 		}
-		
-		return numbersList.stream()
-				.filter(x -> x > 50)
-				.collect(Collectors.toList());
+		return numbersList;
 	}
 
 }
